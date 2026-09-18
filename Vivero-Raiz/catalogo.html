@@ -32,50 +32,136 @@
         <p>208 plantas disponibles. Los precios incluyen la maceta </p>
 
 
-        <div class="buscador">
-
-            <label for="BUSCAR">BUSCAR</label> <br>
-            <input type="text">
-
-            <label for="catalogo">CATEGORIA</label>
-
-            <select>
-                <option value="Rodas">Todas</option>
-                <option value="plantas">Planta de interior</option>
-                <option value="macetas">Planta de exterior</option>
-                <option value="herramientas">Suculentas</option>
-            </select>
+        <article class="buscador">
 
 
+            <div class="columnas-buscador1">
 
-            <!-- PONER CON CSS QUE LA LISTA SALGA ABAJO DE CATEGORIA Y ORDENAR POR-->
+                <label for="BUSCAR">BUSCAR</label> <br>
+                <input type="text">
+
+                <label class="categoria" for="catalogo">CATEGORIA</label>
+
+                <select>
+                    <option value="Todas">Todas</option>
+                    <option value="plantas">Planta de interior</option>
+                    <option value="macetas">Planta de exterior</option>
+                    <option value="herramientas">Suculentas</option>
+                </select>
 
 
-            <label for="ORDERNAR POR">ORDERNAR POR</label>
-            <select>
-                <option value="Rodas">Nombre (A-Z)</option>
-            </select>
+
+                <!-- PONER CON CSS QUE LA LISTA SALGA ABAJO DE CATEGORIA Y ORDENAR POR-->
+
+                <div class="columnas-buscador2">
+                <label class="ordenar" for="ORDERNAR POR">ORDERNAR POR</label>
+                <select>
+                    <option value="Rodas">Nombre (A-Z)</option>
+                </select>
+                </div>
+
+            </div>
+
+            <button class="btn">FILTRAR</button>
 
 
-            <button>FILTRAR</button>
+        </article>
 
-        </div>
+
+
+        <!-- CONTENEDOR DE CARTAS-->
+
+
+        <article>
+
+            <div class="contenedor-cards">
+
+
+
+
+                <div class="card">
+                    <img src="img/sansevieria.jpg" alt="Planta de interior">
+                    <p>Interior</p>
+                    <h3>Sansevieria</h3>
+                    <p>Moonstera deliciosa</p>
+                    <p><b>$ 12.400</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/palmera.jpg" alt="Planta de exterior">
+                    <p>Exterior</p>
+                    <h3>Palmera</h3>
+                    <p>palmera</p>
+                    <p><b>$ 24.900</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/suculenta.jpg" alt="Suculentas">
+                    <p>Suculentas</p>
+                    <h3>Cactus bola</h3>
+                    <p>cactus</p>
+                    <p><b>$ 4.200</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+            </div>
+
+
+            <div class="contenedor-cards">
+
+
+                <div class="card">
+                    <img src="img/sansevieria.jpg" alt="Planta de interior">
+                    <p>Interior</p>
+                    <h3>Ficus lira</h3>
+                    <p>Ficus</p>
+                    <p><b>$ 18.700</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/sansevieria.jpg" alt="Planta de interior">
+                    <p>Interior</p>
+                    <h3>Potus</h3>
+                    <p>Potu</p>
+                    <p><b>$ 5.100</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/suculenta.jpg" alt="Suculentas">
+                    <p>Exterior</p>
+                    <h3>Romero</h3>
+                    <p>Romerito</p>
+                    <p><b>$ 3.800</b></p>
+                    <a href="">Ver Ficha →</a>
+                </div>
+
+            </div>
+
+
+
+            <div class="paginas">
+
+
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <p>Siguiente →</p>
+
+            </div>
+
+
+        </article>
+
+
+
+
 
 
     </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
