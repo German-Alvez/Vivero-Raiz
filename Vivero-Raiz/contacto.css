@@ -1,3 +1,39 @@
+body {
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 50% 1fr;
+    grid-template-areas:
+        "nav nav"
+        "article aside"
+        "footer footer"
+    ;
+
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
+
+
 
 
 /*NAV*/
@@ -49,6 +85,102 @@ nav img {
 
 
 
+/*  ARTICLE  */
+
+
+.lado-izq {
+    display: flex;
+    flex-direction: column;
+    border: #0b1611 2px solid;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+
+.nombre-correo{
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.nombre-correo input {
+    margin-top: 10px;
+    width: 80%;
+}
+
+
+.tel-motivo {
+    justify-content: space-between;
+}
+
+
+
+h1 {
+    color: #2F3C37;
+}
+
+p {
+    color: #959E98;
+}
+
+label {
+    color: #959E98;
+}
+
+input {
+
+    width: 35%;
+    border: 2px solid #DBD8D3;
+    padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ASIDE  */
+
+
+.lado-derecho {
+    margin-top: 30px;
+    padding-left: 30px;
+    border: #0b1611 2px solid;
+    background-color: #F7F5F0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,8 +194,8 @@ nav img {
 
 
 .pie-pagina {
-    background-color: #0b1611; 
-    color: #8fa095; 
+    background-color: #0b1611;
+    color: #8fa095;
     font-family: sans-serif;
     padding: 40px 60px 20px 60px;
 }
@@ -74,7 +206,7 @@ nav img {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 
@@ -84,9 +216,9 @@ nav img {
 
 
 .columna h4 {
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 14px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
@@ -99,7 +231,7 @@ nav img {
 
 .footer-nav {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 8px;
     align-items: start;
 }

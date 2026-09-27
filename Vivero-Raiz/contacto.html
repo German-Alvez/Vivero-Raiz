@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,98 @@
 
     <link rel="stylesheet" href="contacto.css">
 </head>
+
 <body>
-    
- <nav >
+
+    <nav>
         <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
-        
-        <div class="link"><a  href="catalogo.html">CATALOGO</a>
-        <a  href="">NOSOTROS</a>
-        <a  href="contacto.html">CONTACTO</a>
-        <a  href="login.html"><button>INGRESAR</button></a></div>
+
+        <div class="link"><a href="catalogo.html">CATALOGO</a>
+            <a href="">NOSOTROS</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="login.html"><button>INGRESAR</button></a>
+        </div>
 
     </nav>
 
 
 
+    <article class="lado-izq">
+        <H1>CONTACTO</H1>
+        <P>Escribinos por encargos, envios o asesoramiento. Respondemos dentro de las <br>
+            48 horas habiles.
+        </P>
+
+        <div class="nombre-correo">
+            <div>
+                <label for="">NOMBRE Y APELLIDO *</label>
+                <input type="text"><br>
+            </div>
+            <div>
+                <label for="">CORREO ELECTRONICO*</label>
+                <input type="text"><br>
+            </div>
+        </div>
+
+        <div class="tel-motivo">
+        <label for="">TELEFONO</label><br>
+        <input type="text">
+
+        <label class="categoria" for="motivo">MOTIVO *</label>
+
+        <select>
+            <option value="Todas">Elegi un motivo</option>
+            <option value="plantas">Consulta</option>
+            <option value="macetas">Reclamo</option>
+            <option value="herramientas">Pedido</option>
+        </select><br>
+        </div>
+
+        <label for="">MENSAJE *</label><br>
+        <textarea name="" id=""></textarea><br>
+
+        <input type="checkbox">
+        <p>Quiero recibir las novedades del vivero</p>
+
+        <button>ENVIAR CONSULTA</button>
+
+    </article>
 
 
 
 
+
+    <aside class="lado-derecho">
+
+        <H2>DONDE ESTAMOS</H2>
+        <p>Ruta 25 km 4,5 - Escobar, Buenos Aires</p><br>
+        <p>(011) 4444-5566 hola@viveroraiz.com</p><br>
+
+        <p>HORARIOS DE ATENCION</p>
+
+        <div class="DIA"> DIA
+
+            <P>Lunes a viernes</P>
+            <p>Sabados</p>
+            <p>Domingos</p>
+
+        </div>
+
+        <div class="HORARIO"> HORARIO
+
+            <P>9 a 18</P>
+            <p>9 a 13</p>
+            <p>Cerrado</p>
+
+        </div>
+
+        <label for="">mapa embebido (iframe)</label><br>
+        <textarea name="" id=""></textarea>
+
+
+
+
+    </aside>
 
 
 
@@ -35,43 +110,44 @@
 
     <!-- FOOTER -->
 
-<footer class="pie-pagina">
-    <!-- Contenedor de las 3 columnas principales -->
-    <div class="footer-columnas">
-        
-        
-        <div class="columna">
-            <h4>VIVERO RAÍZ</h4>
-            <p>Ruta 25 km 4,5</p>
-            <p>Escobar, Buenos Aires</p>
-            <p>(011) 4444-5566</p>
+    <footer class="pie-pagina">
+        <!-- Contenedor de las 3 columnas principales -->
+        <div class="footer-columnas">
+
+
+            <div class="columna">
+                <h4>VIVERO RAÍZ</h4>
+                <p>Ruta 25 km 4,5</p>
+                <p>Escobar, Buenos Aires</p>
+                <p>(011) 4444-5566</p>
+            </div>
+
+
+            <div class="columna">
+                <h4>SECCIONES</h4>
+                <nav class="footer-nav">
+                    <a href="#catalogo">Catálogo</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#ingresar">Ingresar</a>
+                </nav>
+            </div>
+
+
+            <div class="columna">
+                <h4>HORARIOS</h4>
+                <p>Lunes a viernes de 9 a 18</p>
+                <p>Sábados de 9 a 13</p>
+                <p>Domingos cerrado</p>
+            </div>
+
         </div>
 
-  
-        <div class="columna">
-            <h4>SECCIONES</h4>
-            <nav class="footer-nav">
-                <a href="#catalogo">Catálogo</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-                <a href="#ingresar">Ingresar</a>
-            </nav>
+
+        <div class="footer-barra">
+            <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
         </div>
-
-    
-        <div class="columna">
-            <h4>HORARIOS</h4>
-            <p>Lunes a viernes de 9 a 18</p>
-            <p>Sábados de 9 a 13</p>
-            <p>Domingos cerrado</p>
-        </div>
-
-    </div>
-
-
-    <div class="footer-barra">
-        <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>

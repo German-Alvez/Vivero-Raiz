@@ -1,0 +1,97 @@
+section {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    place-items: center;
+}
+
+
+.contenedor {
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 1000px;
+    height: 550px;
+    border: 2px solid #DBD8D3;
+    overflow: hidden;
+}
+
+
+.izq {
+    background-color: rgba(3, 73, 3, 0.466);
+    flex-direction: column;
+    color: #FFFFFF;
+
+}
+
+.der {
+    background-color: #FFFFFF;
+    flex-direction: column;
+    padding-left: 75px;
+    color: #959E98;
+    border: solid 1px #DBD8D3;
+}
+
+.der h2 {
+    color: #2F3C37;
+}
+
+
+
+.der-contenedor{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.der-contenedor button {
+
+    width: 83%;
+    padding: 8px;
+    background-color: #16261F;
+    color: #bbcfc5;
+
+}
+
+
+.der input {
+
+    width: 80% ;
+    border: 2px solid #DBD8D3;
+    padding: 8px;
+}
+
+
+
+.error {
+
+    background-color: rgb(250, 235, 235);
+    color: red;
+    padding: 8px;
+    border-left: 3px solid rgb(192, 8, 8);
+    width: 80%;
+}
+
+
+.dividir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 83%;
+}
+
+
+.dividir a {
+    color: #2F3C37;
+}
+
+.titulo-p {
+    margin: 30px 30px 300px;
+}
+
+.h3-p {
+    margin: 30px;
+}
