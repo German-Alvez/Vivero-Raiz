@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+}
+
+
 /*NAV*/
 
 nav {
@@ -5,7 +10,6 @@ nav {
     gap: 10px;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px #16261F;
 }
 
 nav img {
@@ -37,12 +41,14 @@ nav img {
 
 header {
 
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+
     /*despues sacar es para ver la lista del catalogo*/
 }
 
-
-
+.h1-p {
+    margin-left: 30px;
+}
 
 
 
@@ -54,15 +60,18 @@ header {
     background-color: #F7F5F0;
     padding: 30px;
     color: #818B84;
-
+    border: #dbd9d2 solid 1px;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 10px;
 }
 
-
-.columnas-buscador1 {
-
+.categoria {
     display: flex;
+    flex-direction: column;
+    width: 300px;
 }
-
 
 .buscador input {
 
@@ -71,23 +80,33 @@ header {
 }
 
 
-.categoria {
-
-    gap: 8px;
-    align-items: start;
-    flex-direction: column;
-}
 
 .ordenar {
-    gap: 8px;
-    align-items: start;
+    display: flex;
     flex-direction: column;
+    width: 250px;
 }
+
+
 
 
 .btn {
     margin-left: 40px; 
+    width: 100px;
+    background-color: #0b1611;
+    color: #f1f3f2;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,6 +138,21 @@ header {
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    background-color: #deece3;
+    color:#818B84;
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.card a {
+
+    color: #345C4A;
 }
 
 
@@ -149,7 +183,11 @@ header {
     color: #345C4A;
 }
 
+.paginas .btn1 {
 
+    background-color: #0b1611;
+    color: #f1f3f2;
+}
 
 
 

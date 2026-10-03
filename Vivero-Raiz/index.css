@@ -1,3 +1,8 @@
+body{
+
+    margin: 0;
+}
+    
 
 
 /*NAV*/
@@ -62,9 +67,23 @@ header button {
     margin-left: 15px;
 }
 
+.btn-llegar {
+
+    color: #f5f5f5;
+    background-color: #345C4A;
+    border: #f5f5f5 1px solid;
+}
 
 
-/* ARTICULO H2 Y PARRAFO */ 
+
+
+
+
+/* ARTICULO, H2 Y PARRAFO */ 
+
+article {
+  padding-left: 30px;
+}
 
 article h2 {
     margin-top: 35px;
@@ -85,7 +104,6 @@ article p {
     display: flex;
     gap: 20px;
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -101,7 +119,7 @@ article p {
 }
 
 .card img {
-    width: 100%;
+    max-width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
@@ -114,12 +132,33 @@ article p {
 
 .articulo-dividido {
   display: flex;
-  gap: 20px; 
+  margin-top: 50px;
+  background-color: #F7F5F0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .columna {
   flex: 1; 
 }
+
+.columna img {
+    max-width: 500px;
+    height: 300px;
+}
+
+.columna2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna2 button {
+    width: 200px;
+    background-color: #16261F;
+    color: #f5f5f5;
+    padding: 8px;
+}
+
 
 
 
@@ -127,10 +166,11 @@ article p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     gap: 20px;
     background-color: #16261F;
     color: #8fa095;
+    margin: 0;
 }
 
 .intranet h3 {
@@ -139,13 +179,25 @@ article p {
 
 .columna-izquierda, 
 .columna-derecha {
-    flex: 1;
+    
+    margin-left: 30px;
 }
 
 .columna-derecha {
     display: flex;
     justify-content: center; 
 }
+
+.columna-derecha button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 30px;
+}
+
+
+
+
 
 
 

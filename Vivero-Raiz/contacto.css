@@ -8,7 +8,7 @@ body {
     grid-template-columns: 50% 1fr;
     grid-template-areas:
         "nav nav"
-        "article aside"
+        "main main"
         "footer footer"
     ;
 
@@ -18,13 +18,10 @@ nav {
     grid-area: nav;
 }
 
-article {
-    grid-area: article;
+main {
+    grid-area: main;
 }
 
-aside {
-    grid-area: aside;
-}
 
 footer {
     grid-area: footer;
@@ -43,6 +40,7 @@ nav {
     gap: 10px;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #959E98;
 
 }
 
@@ -74,7 +72,13 @@ nav img {
 
 
 
+main{
 
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+
+
+}
 
 
 
@@ -89,9 +93,7 @@ nav img {
 
 
 .lado-izq {
-    display: flex;
-    flex-direction: column;
-    border: #0b1611 2px solid;
+
     margin-left: 30px;
     margin-top: 30px;
 }
@@ -102,6 +104,7 @@ nav img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 .nombre-correo input {
@@ -109,10 +112,61 @@ nav img {
     width: 80%;
 }
 
+.nombre-correo textarea {
+
+    width: 95%;
+}
+
+.categoria {
+
+    margin-left: 150px;
+}
+
 
 .tel-motivo {
-    justify-content: space-between;
+   display: flex;
+   
+   margin-bottom: 30px;
+   
 }
+
+.tel-motivo input {
+    margin-top: 10px;
+    width: 140%;
+}
+
+.tel-motivo select {
+    width: 299px;
+}
+
+
+
+
+.msj {
+
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+}
+
+.msj  textarea {
+
+    height: 100px;
+}
+
+.check {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.lado-izq button {
+
+    background-color: #0b1611;
+    color: #F7F5F0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 
 
@@ -130,7 +184,6 @@ label {
 
 input {
 
-    width: 35%;
     border: 2px solid #DBD8D3;
     padding: 8px;
 }
@@ -159,22 +212,40 @@ input {
 
 
 .lado-derecho {
-    margin-top: 30px;
+    display: grid;
+    align-content: start;
+    background-color: #F7F5F0;
+    margin-bottom: 100px;
+    margin-top: 100px;
     padding-left: 30px;
-    border: #0b1611 2px solid;
+    margin-right: 30px;
+    padding-bottom: 50px;
+}
+
+.dia-hs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: #DBD8D3 1px solid;
+    margin-right: 30px;
     background-color: #F7F5F0;
 }
 
+.diiv {
+    
+    border: #DBD8D3 1px solid;
+    padding: 5px;
+}
 
+.div2 {
+    padding: 5px;
+    background-color: #EDEAE1;
+    border: #DBD8D3 1px solid;
+}
 
-
-
-
-
-
-
-
-
+.lado-derecho textarea {
+    margin-right: 30px;
+    height: 150px;
+}
 
 
 
