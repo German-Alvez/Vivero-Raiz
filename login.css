@@ -2,7 +2,7 @@ section {
     display: grid;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     place-items: center;
 }
 
@@ -12,7 +12,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 1000px;
-    height: 550px;
+    height: auto;
     border: 2px solid #DBD8D3;
     overflow: hidden;
 }
@@ -95,3 +95,30 @@ section {
 .h3-p {
     margin: 30px;
 }
+
+
+
+
+@media screen and (max-width: 1023px) {
+    
+    .contenedor {
+        display: flex ;
+        flex-direction: column ; 
+        width: 90%;
+        height: auto;
+        max-width: 500px;
+    }
+
+    .titulo-p {
+        margin: 20px;
+    }
+
+
+    .dividir {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+  }
+
+ 

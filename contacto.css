@@ -72,10 +72,10 @@ nav img {
 
 
 
-main{
+main {
 
     display: grid;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
 
 }
@@ -99,7 +99,7 @@ main{
 }
 
 
-.nombre-correo{
+.nombre-correo {
 
     display: flex;
     justify-content: space-between;
@@ -124,10 +124,10 @@ main{
 
 
 .tel-motivo {
-   display: flex;
-   
-   margin-bottom: 30px;
-   
+    display: flex;
+
+    margin-bottom: 30px;
+
 }
 
 .tel-motivo input {
@@ -149,7 +149,7 @@ main{
     width: 93%;
 }
 
-.msj  textarea {
+.msj textarea {
 
     height: 100px;
 }
@@ -231,7 +231,7 @@ input {
 }
 
 .diiv {
-    
+
     border: #DBD8D3 1px solid;
     padding: 5px;
 }
@@ -327,3 +327,29 @@ input {
     text-transform: uppercase;
     margin: 0;
 }
+
+
+
+/* medias queries*/
+
+@media (width <= 768px) {
+
+   main {
+    grid-template-columns: 1fr;
+   }
+
+
+
+}
+
+@media (width < 1024px) {
+
+    main {
+
+        grid-template-columns: 50% 1fr;
+
+    }
+}
+
+
+@media (min-width: 1280px) {}
