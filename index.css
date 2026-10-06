@@ -266,3 +266,166 @@ article p {
     text-transform: uppercase;
     margin: 0;
 }
+
+
+
+
+
+
+
+
+/*   tablet   */
+@media screen and (max-width: 1023px) {
+
+
+
+    /* NAV */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .link a button {
+        width: 100%;
+    }
+
+
+    /* Encabezado Principal */
+    header {
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header button {
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Tarjetas  1 abajo de la otra */
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+    
+    /* Seccion dividida */
+    .articulo-dividido {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .articulo-dividido .columna,
+    .articulo-dividido .columna2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .articulo-dividido img {
+        width: 100%;
+        height: auto;
+    }
+
+    .articulo-dividido button {
+        width: 100%;
+    }
+
+
+
+
+
+    /* Intranet */
+    .intranet {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 25px 15px;
+    }
+
+    .intranet .columna-izquierda,
+    .intranet .columna-derecha {
+        width: 100%;
+    }
+
+    .intranet button {
+        width: 100%;
+    }
+
+
+
+
+
+    /* Footer */
+    .footer-columnas {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/*  celu */
+@media screen and (max-width: 767px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Quita los br */
+    header br,
+    article p br,
+    .columna2 p br {
+        display: none;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    article p {
+        text-align: center;
+        padding: 0 10px;
+    }
+}
