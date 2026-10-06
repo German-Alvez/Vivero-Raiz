@@ -1,0 +1,153 @@
+section {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    place-items: center;
+}
+
+
+.contenedor {
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 1000px;
+    height: auto;
+    border: 2px solid #DBD8D3;
+    overflow: hidden;
+}
+
+
+.izq {
+    background-color: rgba(3, 73, 3, 0.466);
+    flex-direction: column;
+    color: #FFFFFF;
+
+}
+
+.der {
+    background-color: #FFFFFF;
+    flex-direction: column;
+    padding-left: 75px;
+    color: #959E98;
+    border: solid 1px #DBD8D3;
+}
+
+.der h2 {
+    color: #2F3C37;
+}
+
+
+
+.der-contenedor {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.der-contenedor button {
+
+    width: 83%;
+    padding: 8px;
+    background-color: #16261F;
+    color: #bbcfc5;
+
+}
+
+
+.der input {
+
+    width: 80%;
+    border: 2px solid #DBD8D3;
+    padding: 8px;
+}
+
+
+
+.datos-personales {
+
+    display: flex;
+    max-width: 90%;
+}
+
+
+.nombre-apellido {
+
+    width: 80%;
+}
+
+
+
+.fecha-tel {
+
+    display: flex;
+    max-width: 90%
+}
+
+.contraseña {
+
+    width: 80%;
+}
+
+
+
+.rol-vivero select {
+    width: 100%;
+}
+
+
+
+.dividir {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 83%;
+}
+
+
+.dividir a {
+    color: #2F3C37;
+}
+
+.titulo-p {
+    margin: 30px 30px 300px;
+}
+
+.h3-p {
+    margin: 30px;
+}
+
+
+
+
+@media screen and (max-width: 1023px) {
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-width: 500px;
+    }
+
+    .titulo-p {
+        margin: 20px;
+    }
+
+    .izq,
+    .der {
+        width: 100%;
+    }
+
+    .der {
+        padding: 20px;
+    }
+
+    .dividir {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
