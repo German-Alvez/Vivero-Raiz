@@ -262,3 +262,108 @@ header {
     text-transform: uppercase;
     margin: 0;
 }
+
+
+
+
+
+
+@media screen and (max-width: 1023px) {
+
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .link a button {
+        width: 100%;
+    }
+
+    .h1-p h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .h1-p p {
+        text-align: center;
+    }
+
+    
+    .buscador {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 15px;
+        box-sizing: border-box; 
+    }
+
+    .buscador > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .buscador input,
+    .buscador select,
+    .buscador .btn {
+        width: 100% !important;
+        margin: 0 !important; 
+        box-sizing: border-box !important;
+    }
+
+    /* cartas en una sola columna */
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: 1fr; /* Una carta por fila */
+        gap: 20px;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 4.  FOOTER EN COLUMNA */
+    .paginas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 20px 0;
+    }
+
+    .footer-columnas {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
