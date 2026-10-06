@@ -7,16 +7,27 @@ section {
 }
 
 
-.contenedor {
 
+
+.contenedor {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "panel-izq formulario";
     width: 1000px;
     height: auto;
     border: 2px solid #DBD8D3;
     overflow: hidden;
 }
 
+
+.izq {
+    grid-area: panel-izq;
+}
+
+.der {
+    grid-area: formulario;
+}
 
 .izq {
     background-color: rgba(3, 73, 3, 0.466);
@@ -59,7 +70,6 @@ section {
 
 .der input {
 
-    width: 80%;
     border: 2px solid #DBD8D3;
     padding: 8px;
 }
@@ -69,7 +79,7 @@ section {
 .datos-personales {
 
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 
@@ -78,24 +88,52 @@ section {
     width: 80%;
 }
 
-
+.correo input {
+    width: 78%;
+}
 
 .fecha-tel {
 
     display: flex;
-    max-width: 90%
+    max-width: 100%
+}
+
+.contraseñas {
+
+    display: flex;
+    max-width: 100%;
 }
 
 .contraseña {
 
-    width: 80%;
+    width: 84%;
 }
 
+.check {
+    display: flex;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.input-check {
+    width: auto;
+}
 
 
 .rol-vivero select {
-    width: 100%;
+    width: 90%;
 }
+
+.check-novedades {
+
+    width: auto;
+}
+
+
+
+
+
+
 
 
 
@@ -109,6 +147,7 @@ section {
 
 .dividir a {
     color: #2F3C37;
+    padding-bottom: 30px;
 }
 
 .titulo-p {
@@ -125,11 +164,13 @@ section {
 @media screen and (max-width: 1023px) {
 
     .contenedor {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "panel-izq"
+            "formulario";
+        width: 100%;
         max-width: 500px;
+        height: auto;
     }
 
     .titulo-p {
@@ -139,7 +180,50 @@ section {
     .izq,
     .der {
         width: 100%;
+        box-sizing: border-box;
     }
+
+
+    .datos-personales,
+    .fecha-tel,
+    .contraseñas {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .nombre-apellido,
+    .contraseña,
+    .correo input,
+    .contraseña select,
+    .der input,
+    .der-contenedor button,
+    .dividir {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+
+.check {
+    display: flex;
+    align-items: center;  
+    justify-content: flex-start;
+    gap: 8px;                        
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+
+.check input[type="checkbox"],
+.input-check {
+    width: auto;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
 
     .der {
         padding: 20px;
