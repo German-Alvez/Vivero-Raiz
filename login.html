@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="login.css">
-    <title>Login</title>
+    <script src="validaciones.js" defer></script>
+
+    <title>Login | Vivero Raíz</title>
 </head>
 
 <body>
 
     <section>
         <article class="contenedor">
+
             <div class="izq">
 
                 <div class="titulo-p">
@@ -23,47 +26,63 @@
                 <div class="h3-p">
                     <h3>TODO LO QUE CRECE,<br> ORDENADO.</h3>
 
-                    <p>Carga tus plantas, actuyaliza precios y stock. y lleva el
-                        vivero desde una sola pantalla.
+                    <p>
+                        Carga tus plantas, actualiza precios y stock,
+                        y lleva el vivero desde una sola pantalla.
                     </p>
                 </div>
-
 
             </div>
 
             <div class="der">
 
                 <div class="der-contenedor">
+
                     <h2>INGRESAR</h2>
                     <p>Usa la cuenta que te dio el vivero.</p>
 
-                    <p class="error">El correo o la contraseña no coinciden. Proba de nuevo.</p>
+                    <form id="form-login">
 
-                    <label for="">CORREO ELECTRONICO</label><br>
-                    <input type="text">
-                    <p>Ejemplo: nombre@viveroraiz.com</p>
+                        <div id="error-login" class="error" hidden></div>
+                        <div id="exito-login" class="exito" hidden></div>
 
+                        <label for="correo-login">CORREO ELECTRONICO</label><br>
+                        <input type="email" id="correo-login">
 
-                    <label for="">CONTRASEÑA</label><br>
-                    <input type="text">
-                    <p>&#9746 Mantener la sesion abierta</p><br>
+                        <p>Ejemplo: nombre@viveroraiz.com</p>
 
-                    <button>INGRESAR</button><br>
+                        <label for="contrasena-login">CONTRASEÑA</label><br>
+                        <input type="password" id="contrasena-login">
+
+                        <p>&#9746 Mantener la sesion abierta</p><br>
+
+                        <button type="submit">INGRESAR</button>
+
+                    </form>
+
+                    <a href="index.html" class="btn-volver">
+                        VOLVER AL INICIO
+                    </a>
+
                     <div class="dividir">
-                        <a href="">¿Olvidaste tu contraseña?</a>
-                        <p>¿No tenes cuenta? <a href="/registro.html">Registrate</a></p>
+
+                        <p>
+                            <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+                        </p>
+
+                        <p>
+                            ¿No tenes cuenta?
+                            <a href="registro.html">Registrate</a>
+                        </p>
+
                     </div>
+
                 </div>
 
             </div>
 
-
-
-
         </article>
-
     </section>
 
 </body>
-
 </html>

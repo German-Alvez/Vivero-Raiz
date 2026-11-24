@@ -1,47 +1,57 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
 section {
     display: grid;
     margin: 0;
-    padding: 0;
+    padding: 30px 15px;
     min-height: 100vh;
     place-items: center;
 }
 
 
-
+/* FORMULARIO */
 
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-        "panel-izq formulario";
-    width: 1000px;
+    grid-template-areas: "panel-izq formulario";
+    width: 100%;
+    max-width: 1000px;
     height: auto;
     border: 2px solid #DBD8D3;
     overflow: hidden;
 }
 
 
+/* PANEL IZQUIERDO */
+
 .izq {
     grid-area: panel-izq;
-}
-
-.der {
-    grid-area: formulario;
-}
-
-.izq {
     background-color: rgba(3, 73, 3, 0.466);
     flex-direction: column;
     color: #FFFFFF;
-
+    padding: 20px;
 }
 
+
+/* PANEL DERECHO */
+
 .der {
+    grid-area: formulario;
     background-color: #FFFFFF;
     flex-direction: column;
-    padding-left: 75px;
+    padding: 30px 40px;
     color: #959E98;
     border: solid 1px #DBD8D3;
+    min-width: 0;
 }
 
 .der h2 {
@@ -49,93 +59,154 @@ section {
 }
 
 
+/* CONTENEDOR DEL FORMULARIO */
 
 .der-contenedor {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    width: 100%;
 }
 
-.der-contenedor button {
 
+/* BOTONES */
+
+.der-contenedor button,
+.btn-inicio {
+    display: block;
     width: 83%;
-    padding: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+
     background-color: #16261F;
     color: #bbcfc5;
 
+    border: none;
+    border-radius: 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+.der-contenedor button:hover,
+.btn-inicio:hover {
+    background-color: #345C4A;
+    color: #bbcfc5;
+}
+
+.btn-inicio {
+    margin-top: 15px;
+}
+
+
+/* INPUTS */
 
 .der input {
-
+    width: 100%;
     border: 2px solid #DBD8D3;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 0;
+}
+
+.der input:focus {
+    outline: none;
+    border-color: #345C4A;
 }
 
 
+/* DATOS PERSONALES */
 
 .datos-personales {
-
     display: flex;
+    gap: 15px;
     max-width: 100%;
 }
 
-
 .nombre-apellido {
-
     width: 80%;
+    min-width: 0;
 }
 
 .correo input {
     width: 78%;
 }
 
-.fecha-tel {
 
+/* FECHA Y TELÉFONO */
+
+.fecha-tel {
     display: flex;
-    max-width: 100%
+    gap: 15px;
+    max-width: 100%;
 }
 
-.contraseñas {
 
+/* CONTRASEÑAS */
+
+.contraseñas {
     display: flex;
+    gap: 15px;
     max-width: 100%;
 }
 
 .contraseña {
-
     width: 84%;
+    min-width: 0;
 }
+
+
+/* CHECKBOX */
 
 .check {
     display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 10px;
-    width: auto;
+    width: 100%;
 }
 
-.input-check {
+.input-check,
+.check input[type="checkbox"],
+.check-novedades {
     width: auto;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
 }
 
+
+/* ROL */
 
 .rol-vivero select {
     width: 90%;
+    padding: 8px;
+    border: 2px solid #DBD8D3;
+    border-radius: 4px;
 }
 
-.check-novedades {
 
-    width: auto;
+/* MENSAJES */
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.exito {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 
-
-
-
-
-
-
+/* DIVISIÓN */
 
 .dividir {
     display: flex;
@@ -144,14 +215,16 @@ section {
     width: 83%;
 }
 
-
 .dividir a {
     color: #2F3C37;
     padding-bottom: 30px;
 }
 
+
+/* TÍTULOS */
+
 .titulo-p {
-    margin: 30px 30px 300px;
+    margin: 30px;
 }
 
 .h3-p {
@@ -159,9 +232,13 @@ section {
 }
 
 
-
+/* TABLETS Y NOTEBOOKS */
 
 @media screen and (max-width: 1023px) {
+
+    section {
+        padding: 25px 15px;
+    }
 
     .contenedor {
         grid-template-columns: 1fr;
@@ -169,25 +246,25 @@ section {
             "panel-izq"
             "formulario";
         width: 100%;
-        max-width: 500px;
-        height: auto;
+        max-width: 600px;
+    }
+
+    .izq,
+    .der {
+        width: 100%;
     }
 
     .titulo-p {
         margin: 20px;
     }
 
-    .izq,
     .der {
-        width: 100%;
-        box-sizing: border-box;
+        padding: 30px;
     }
-
 
     .datos-personales,
     .fecha-tel,
     .contraseñas {
-        display: flex;
         flex-direction: column;
         gap: 12px;
         width: 100%;
@@ -196,42 +273,95 @@ section {
     .nombre-apellido,
     .contraseña,
     .correo input,
-    .contraseña select,
+    .rol-vivero select,
     .der input,
     .der-contenedor button,
+    .btn-inicio,
     .dividir {
         width: 100%;
-        box-sizing: border-box;
     }
 
+    .check {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
 
-
-.check {
-    display: flex;
-    align-items: center;  
-    justify-content: flex-start;
-    gap: 8px;                        
-    margin-bottom: 12px;
-    width: 100%;
-}
-
-
-.check input[type="checkbox"],
-.input-check {
-    width: auto;
-    height: 16px;
-    margin: 0;
-    cursor: pointer;
-}
-
-
-    .der {
-        padding: 20px;
+    .check input[type="checkbox"] {
+        width: auto;
+        height: 16px;
+        margin: 0;
     }
 
     .dividir {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
+    }
+
+    .dividir a {
+        padding-bottom: 10px;
+    }
+}
+
+
+/* CELULARES */
+
+@media screen and (max-width: 600px) {
+
+    section {
+        padding: 15px 10px;
+    }
+
+    .contenedor {
+        width: 100%;
+    }
+
+    .izq {
+        padding: 15px;
+    }
+
+    .der {
+        padding: 20px 15px;
+    }
+
+    .der h2 {
+        font-size: 21px;
+    }
+
+    .titulo-p,
+    .h3-p {
+        margin: 15px;
+    }
+
+    .der-contenedor button,
+    .btn-inicio {
+        padding: 12px;
+    }
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media screen and (max-width: 380px) {
+
+    .der {
+        padding: 18px 12px;
+    }
+
+    .der h2 {
+        font-size: 19px;
+    }
+
+    .der input {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .titulo-p,
+    .h3-p {
+        margin: 10px;
     }
 }

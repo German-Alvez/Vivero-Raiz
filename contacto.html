@@ -7,6 +7,7 @@
     <title>Contacto</title>
 
     <link rel="stylesheet" href="contacto.css">
+    <script src="validaciones.js" defer></script>
 </head>
 
 <body>
@@ -14,9 +15,11 @@
     <nav>
         <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
 
-        <div class="link"><a href="catalogo.html">CATALOGO</a>
-            <a href="">NOSOTROS</a>
-            <a href="contacto.html">CONTACTO</a>
+        <div class="link">
+            <a href="intranet.html">INTRANET</a>
+            <a href="index.html">INICIO</a>
+            <a href="catalogo.html">CATALOGO</a>
+            <a href="nosotros.html">NOSOTROS</a>
             <a href="login.html"><button>INGRESAR</button></a>
         </div>
 
@@ -24,51 +27,80 @@
 
 
     <main>
-        <article class="lado-izq">
-            <H1>CONTACTO</H1>
-            <P>Escribinos por encargos, envios o asesoramiento. <br>
-                 Respondemos dentro de las 48 horas habiles.
-            </P>
+        
+<article class="lado-izq">
 
-            <div class="nombre-correo">
-                <div>
-                    <label for="">NOMBRE Y APELLIDO *</label>
-                    <input type="text">
-                </div><br>
-                <div>
-                    <label for="">CORREO ELECTRONICO*</label>
-                    <input type="text"><br>
-                </div>
+    <h1>CONTACTO</h1>
+
+    <p>
+        Escribinos por encargos, envíos o asesoramiento. <br>
+        Respondemos dentro de las 48 horas hábiles.
+    </p>
+
+    <form id="form-contacto" novalidate>
+
+        <!-- MENSAJES PARA JAVASCRIPT -->
+        <div id="mensaje-error" class="mensaje error" hidden></div>
+        <div id="mensaje-exito" class="mensaje exito" hidden></div>
+
+        <!-- NOMBRE Y CORREO -->
+        <div class="nombre-correo">
+
+            <div>
+                <label for="nombre">NOMBRE Y APELLIDO *</label>
+                <input type="text" id="nombre" name="nombre">
             </div>
 
-            <div class="tel-motivo">
-                <div>
-                    <label for="">TELEFONO</label><br>
-                    <input type="text">
-                </div><br>
-                <div class="categoria">
-                    <label for="motivo">MOTIVO *</label><br>
+            <br>
 
-                    <select>
-                        <option value="Todas">Elegi un motivo</option>
-                        <option value="plantas">Consulta</option>
-                        <option value="macetas">Reclamo</option>
-                        <option value="herramientas">Pedido</option>
-                    </select>
-                </div>
+            <div>
+                <label for="correo">CORREO ELECTRÓNICO *</label>
+                <input type="email" id="correo" name="correo">
             </div>
 
-            <div class="msj">
-                <label for="">MENSAJE *</label><br>
-                <textarea name="" id=""></textarea><br>
-            </div>
-            <div class="check">
-                <input type="checkbox">
-                <p>Quiero recibir las novedades del vivero</p>
-            </div>
-            <button>ENVIAR CONSULTA</button>
+        </div>
 
-        </article>
+        <!-- TELEFONO Y MOTIVO -->
+        <div class="tel-motivo">
+
+            <div>
+                <label for="telefono">TELÉFONO</label>
+                <input type="text" id="telefono" name="telefono">
+            </div>
+
+            <br>
+
+            <div class="categoria">
+                <label for="motivo">MOTIVO *</label>
+
+                <select id="motivo" name="motivo">
+                    <option value="">Elegí un motivo</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="pedido">Pedido</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- MENSAJE -->
+        <div class="msj">
+            <label for="mensaje">MENSAJE *</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="check">
+            <input type="checkbox" id="novedades" name="novedades">
+            <p>Quiero recibir las novedades del vivero</p>
+        </div>
+
+        <button type="submit">ENVIAR CONSULTA</button>
+
+    </form>
+
+</article>
+
 
 
 

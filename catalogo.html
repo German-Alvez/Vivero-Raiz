@@ -1,185 +1,124 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
+
+    <title>Catálogo | Vivero Raíz</title>
+
     <link rel="stylesheet" href="catalogo.css">
+
+    <script src="datos.js" defer></script>
+    <script src="apis.js" defer></script>
+    <script src="catalogo.js" defer></script>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
 
-    <nav >
+    <nav>
         <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
 
-        <div class="link"><a href="catalogo.html">CATALOGO</a>
-            <a href="">NOSOTROS</a>
+        <div class="link">
+            <a href="intranet.html">INTRANET</a>
+            <a href="index.html">INICIO</a>
+            <a href="nosotros.html">NOSOTROS</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="login.html"><button>INGRESAR</button></a>
         </div>
-
     </nav>
 
-
-
-    <!-- HEADER    -->
+    <!-- HEADER Y BUSCADOR -->
 
     <header>
+
         <div class="h1-p">
-            <h1> Catalogo </h1>
-            <p>208 plantas disponibles. Los precios incluyen la maceta </p>
+            <h1>Catálogo</h1>
+            <p>100 plantas disponibles. Los precios incluyen la maceta.</p>
         </div>
 
         <article class="buscador">
 
-
             <div>
-
-                <div">
-                    <label for="BUSCAR">BUSCAR</label> <br>
-                    <input type="text">
+                <label for="buscar-planta">BUSCAR</label>
+                <input
+                    type="text"
+                    id="buscar-planta"
+                    placeholder="Buscar por nombre..."
+                >
             </div>
 
             <div class="categoria">
-                <label>CATEGORIA</label>
+                <label for="filtro-categoria">CATEGORÍA</label>
 
-                <select>
-                    <option value="Todas">Todas</option>
-                    <option value="plantas">Planta de interior</option>
-                    <option value="macetas">Planta de exterior</option>
-                    <option value="herramientas">Suculentas</option>
+                <select id="filtro-categoria">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="interior">Plantas de interior</option>
+                    <option value="exterior">Plantas de exterior</option>
+                    <option value="suculenta">Suculentas</option>
                 </select>
             </div>
-
-
 
             <div class="ordenar">
-                <label>ORDERNAR POR</label>
-                <select><br>
-                    <option value="Rodas">Nombre (A-Z)</option>
+                <label for="ordenar-plantas">ORDENAR POR</label>
+
+                <select id="ordenar-plantas">
+                    <option value="original">Ordenar por</option>
+                    <option value="nombre-asc">Nombre (A-Z)</option>
+                    <option value="nombre-desc">Nombre (Z-A)</option>
+                    <option value="precio-asc">Precio (menor a mayor)</option>
+                    <option value="precio-desc">Precio (mayor a menor)</option>
                 </select>
             </div>
 
-            </div>
-
-            <button class="btn">FILTRAR</button>
-
+            <button type="button" id="btn-limpiar" class="btn">
+                LIMPIAR FILTROS
+            </button>
 
         </article>
 
+        <!-- MENSAJE DE ESTADO -->
 
+        <p id="mensaje-estado" role="status" aria-live="polite"></p>
 
-        <!-- CONTENEDOR DE CARTAS-->
+        <!-- CONTADOR DE RESULTADOS -->
 
+        <p id="contador-resultados"></p>
+
+        <!-- CONTENEDOR DE TARJETAS -->
 
         <article>
 
-            <div class="contenedor-cards">
-
-
-
-
-                <div class="card">
-                    <img src="img/sansevieria.jpg" alt="Planta de interior">
-                    <p class="titulo">Interior</p>
-                    <h3>Sansevieria</h3>
-                    <p>Moonstera deliciosa</p>
-                    <p><b>$ 12.400</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/palmera.jpg" alt="Planta de exterior">
-                    <p class="titulo">Exterior</p>
-                    <h3>Palmera</h3>
-                    <p>palmera</p>
-                    <p><b>$ 24.900</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/suculenta.jpg" alt="Suculentas">
-                    <p class="titulo">Suculentas</p>
-                    <h3>Cactus bola</h3>
-                    <p>cactus</p>
-                    <p><b>$ 4.200</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
+            <div class="contenedor-cards" id="contenedor-cards">
             </div>
 
+            <!-- MENSAJE SIN RESULTADOS -->
 
-            <div class="contenedor-cards">
+            <p id="sin-resultados" hidden>
+                No se encontraron plantas con esos filtros.
+            </p>
 
-
-                <div class="card">
-                    <img src="img/sansevieria.jpg" alt="Planta de interior">
-                    <p class="titulo">Interior</p>
-                    <h3>Ficus lira</h3>
-                    <p>Ficus</p>
-                    <p><b>$ 18.700</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/sansevieria.jpg" alt="Planta de interior">
-                    <p class="titulo">Interior</p>
-                    <h3>Potus</h3>
-                    <p>Potu</p>
-                    <p><b>$ 5.100</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/suculenta.jpg" alt="Suculentas">
-                    <p class="titulo">Exterior</p>
-                    <h3>Romero</h3>
-                    <p>Romerito</p>
-                    <p><b>$ 3.800</b></p>
-                    <a href="">Ver Ficha →</a>
-                </div>
-
-            </div>
-
-
+            <!-- PAGINACIÓN VISUAL -->
 
             <div class="paginas">
-
-
-                <button class="btn1">1</button>
-                <button>2</button>
-                <button>3</button>
+                <button type="button" class="btn1">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
                 <p>Siguiente →</p>
-
             </div>
-
 
         </article>
 
-
-
-
-
-
     </header>
-
-
-
-
-
-
-
-
-
 
     <!-- FOOTER -->
 
     <footer class="pie-pagina">
-        <!-- Contenedor de las 3 columnas principales -->
-        <div class="footer-columnas">
 
+        <div class="footer-columnas">
 
             <div class="columna">
                 <h4>VIVERO RAÍZ</h4>
@@ -188,17 +127,16 @@
                 <p>(011) 4444-5566</p>
             </div>
 
-
             <div class="columna">
                 <h4>SECCIONES</h4>
+
                 <nav class="footer-nav">
-                    <a href="#catalogo">Catálogo</a>
-                    <a href="#nosotros">Nosotros</a>
-                    <a href="#contacto">Contacto</a>
-                    <a href="#ingresar">Ingresar</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="login.html">Ingresar</a>
                 </nav>
             </div>
-
 
             <div class="columna">
                 <h4>HORARIOS</h4>
@@ -209,12 +147,11 @@
 
         </div>
 
-
         <div class="footer-barra">
-            <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
+            <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRÁCTICO INTEGRADOR</p>
         </div>
+
     </footer>
 
 </body>
-
 </html>

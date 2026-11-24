@@ -1,0 +1,463 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F7F5F0;
+    color: #16261F;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
+/* HEADER Y NAVBAR */
+
+header {
+    background-color: #345C4A;
+    color: #F8F9F8;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: #F8F9F8;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: #F8F9F8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #8fa095;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+.panel {
+    padding: 40px;
+    flex: 1;
+    width: 100%;
+}
+
+
+/* FORMULARIO */
+
+.formulario-contenedor {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #F8F9F8;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* TÍTULO */
+
+.titulo-formulario {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.titulo-formulario h2 {
+    color: #16261F;
+    margin-top: 0;
+}
+
+.titulo-formulario p {
+    color: #8fa095;
+    line-height: 1.5;
+}
+
+
+/* CAMPOS */
+
+.formulario-planta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+.campo label {
+    color: #16261F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd3cc;
+    border-radius: 5px;
+    background-color: white;
+    color: #16261F;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* ÁREA DE TEXTO */
+
+.campo textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+
+/* EFECTO AL SELECCIONAR CAMPOS */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #345C4A;
+    border-color: #345C4A;
+}
+
+
+/* BOTONES DEL FORMULARIO */
+
+.botones-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* GUARDAR */
+
+.btn-guardar {
+    background-color: #345C4A;
+    color: #F8F9F8;
+}
+
+.btn-guardar:hover {
+    background-color: #16261F;
+}
+
+
+/* CANCELAR */
+
+.btn-cancelar {
+    background-color: #e3e7e3;
+    color: #16261F;
+}
+
+.btn-cancelar:hover {
+    background-color: #cbd3cc;
+}
+
+
+/* FOOTER */
+
+.pie-pagina {
+    background-color: #0b1611;
+    color: #8fa095;
+    font-family: sans-serif;
+    padding: 40px 60px 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-columnas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.columna {
+    flex: 1;
+    min-width: 0;
+}
+
+.columna h4 {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.columna p {
+    font-size: 13px;
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+
+/* MENSAJES DEL FORMULARIO */
+
+#mensaje-formulario {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#mensaje-formulario:empty {
+    display: none;
+}
+
+#mensaje-formulario.exito {
+    color: #345C4A;
+}
+
+#mensaje-formulario.error {
+    color: #b42318;
+}
+
+
+
+/* LINKS DEL FOOTER */
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.footer-nav a {
+    color: #8fa095;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+
+/* BARRA INFERIOR */
+
+.footer-barra {
+    border-top: 1px solid #1a2921;
+    padding-top: 20px;
+}
+
+.footer-barra p {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ACCESIBILIDAD */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #D49B42;
+    outline-offset: 3px;
+}
+
+
+/* NOTEBOOKS Y TABLETS */
+
+@media screen and (max-width: 1023px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    .panel {
+        padding: 30px 20px;
+    }
+
+    .formulario-contenedor {
+        max-width: 700px;
+        padding: 30px;
+    }
+
+    .pie-pagina {
+        padding: 30px;
+    }
+
+    .footer-columnas {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .columna {
+        flex: 1 1 200px;
+    }
+}
+
+
+/* CELULARES */
+
+@media screen and (max-width: 767px) {
+
+    /* HEADER */
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* PANEL */
+
+    .panel {
+        padding: 20px 15px;
+    }
+
+    /* FORMULARIO */
+
+    .formulario-contenedor {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .titulo-formulario {
+        margin-bottom: 20px;
+    }
+
+    .titulo-formulario h2 {
+        font-size: 21px;
+    }
+
+    .formulario-planta {
+        gap: 17px;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 16px;
+    }
+
+    /* BOTONES */
+
+    .botones-formulario {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-guardar,
+    .btn-cancelar {
+        width: 100%;
+        padding: 14px;
+    }
+
+    /* FOOTER */
+
+    .pie-pagina {
+        padding: 30px 20px 20px;
+    }
+
+    .footer-columnas {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .columna {
+        width: 100%;
+    }
+
+    .footer-nav {
+        align-items: center;
+    }
+
+    .footer-barra {
+        text-align: center;
+    }
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media screen and (max-width: 380px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .panel {
+        padding: 15px 10px;
+    }
+
+    .formulario-contenedor {
+        padding: 15px;
+    }
+
+    .titulo-formulario h2 {
+        font-size: 19px;
+    }
+
+    .pie-pagina {
+        padding: 25px 12px 15px;
+    }
+
+}

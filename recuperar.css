@@ -1,0 +1,210 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F5F0;
+    color: #16261F;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor-recuperar {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* TARJETA */
+
+.tarjeta-recuperar {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+
+/* LOGO */
+
+.tarjeta-recuperar img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+.tarjeta-recuperar h1 {
+    color: #0b1611;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.descripcion {
+    color: #8fa095;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+form label {
+    color: #345C4A;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #8fa095;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #345C4A;
+}
+
+
+/* BOTÓN */
+
+form button {
+    width: 100%;
+    background-color: #0b1611;
+    color: #F8F9F8;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #345C4A;
+}
+
+
+/* VOLVER AL LOGIN */
+
+.volver {
+    display: inline-block;
+    margin-top: 25px;
+    color: #345C4A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+
+/* MENSAJES */
+
+#mensaje-error {
+    color: #c0392b;
+    font-size: 13px;
+}
+
+#mensaje-exito {
+    color: #345C4A;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* TABLETS */
+
+@media screen and (max-width: 768px) {
+
+    .contenedor-recuperar {
+        padding: 25px;
+    }
+
+    .tarjeta-recuperar {
+        max-width: 430px;
+        padding: 35px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media screen and (max-width: 480px) {
+
+    .contenedor-recuperar {
+        padding: 20px 15px;
+    }
+
+    .tarjeta-recuperar {
+        padding: 25px 20px;
+    }
+
+    .tarjeta-recuperar img {
+        width: 125px;
+    }
+
+    .tarjeta-recuperar h1 {
+        font-size: 22px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media screen and (max-width: 360px) {
+
+    .tarjeta-recuperar {
+        padding: 20px 15px;
+    }
+
+    .tarjeta-recuperar h1 {
+        font-size: 20px;
+    }
+
+    form input,
+    form button {
+        padding: 12px;
+    }
+
+}

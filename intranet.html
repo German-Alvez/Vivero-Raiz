@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intranet | Vivero Raíz</title>
+
+    <link rel="stylesheet" href="intranet.css">
+    <script src="apis.js" defer></script>
+    <script src="intranet.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="barra-superior">
+
+        <nav>
+            <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo Vivero Raíz">
+
+            <div class="link">
+                <a href="index.html">INICIO</a>
+                <a href="login.html">CERRAR SESION</a>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- PANEL -->
+
+    <main class="panel">
+
+        <section class="encabezado-panel">
+
+            <div>
+                <h2>Administración de plantas</h2>
+                <p>Gestioná las plantas de tu vivero.</p>
+            </div>
+
+            <a href="agregarPlanta.html" class="btn-agregar">
+                Agregar planta
+            </a>
+
+        </section>
+
+
+
+        <!-- TABLA DE PLANTAS -->
+
+        <section class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <p id="mensaje-intranet" role="status" aria-live="polite"></p>
+
+                <table>
+
+
+                    <tbody id="tabla-plantas">
+                    </tbody>
+                </table>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="pie-pagina">
+
+        <div class="footer-columnas">
+
+            <div class="columna">
+                <h4>VIVERO RAÍZ</h4>
+                <p>Ruta 25 km 4,5</p>
+                <p>Escobar, Buenos Aires</p>
+                <p>(011) 4444-5566</p>
+            </div>
+
+
+            <div class="columna">
+                <h4>SECCIONES</h4>
+
+                <nav class="footer-nav">
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="index.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="login.html">Ingresar</a>
+                </nav>
+            </div>
+
+
+            <div class="columna">
+                <h4>HORARIOS</h4>
+                <p>Lunes a viernes de 9 a 18</p>
+                <p>Sábados de 9 a 13</p>
+                <p>Domingos cerrado</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-barra">
+            <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +8,12 @@
     <title>Registro</title>
 
     <link rel="stylesheet" href="registro.css">
+    <script src="validaciones.js" defer></script>
 </head>
 
 <body>
 
     <section>
-
         <article class="contenedor">
 
             <div class="izq">
@@ -24,134 +25,129 @@
 
                 <div class="h3-p">
                     <h3>SUMATE AL EQUIPO.</h3>
-
-                    <p>Crea tu cuenta para cargar plantas. editar <br>
-                        fichasy ver el movimiento del catalogo
+                    <p>
+                        Crea tu cuenta para cargar plantas, editar
+                        fichas y ver el movimiento del catalogo.
                     </p>
                 </div>
 
-
             </div>
-
-
-
-
-
 
             <div class="der">
 
-
                 <div class="der-contenedor">
-
 
                     <h2>Crear Cuenta</h2>
                     <p>Los campos marcados con * son obligatorios.</p>
 
+                    <form id="form-registro">
 
-                    <p>datos personales</p>
+                        <div id="error-registro" class="error" hidden></div>
+                        <div id="exito-registro" class="exito" hidden></div>
 
+                        <p>DATOS PERSONALES</p>
 
+                        <div class="datos-personales">
 
-                    <div class="datos-personales">
+                            <div class="nombre-apellido">
+                                <label for="nombre-registro">NOMBRE *</label><br>
+                                <input type="text" id="nombre-registro">
+                            </div>
 
-                        <div class="nombre-apellido">
-                            <label for="">NOMBRE *</label><br>
-                            <input type="text"><br>
+                            <div class="nombre-apellido">
+                                <label for="apellido-registro">APELLIDO *</label><br>
+                                <input type="text" id="apellido-registro">
+                            </div>
+
                         </div>
 
-                        <div class="nombre-apellido">
-                            <label for="">APELLIDO *</label><br>
-                            <input type="text"><br>
-                        </div>
-                    </div> <br>
+                        <br>
 
+                        <div class="fecha-tel">
 
-                    <div>
+                            <div class="nombre-apellido">
+                                <label for="fecha-registro">FECHA DE NACIMIENTO *</label><br>
+                                <input type="date" id="fecha-registro">
+                            </div>
 
-                        <div>
+                            <div class="nombre-apellido">
+                                <label for="telefono-registro">TELEFONO *</label><br>
+                                <input type="tel" id="telefono-registro">
+                            </div>
 
-                            <div class="fecha-tel">
-
-                                <div class="nombre-apellido">
-                                    <label for="">FECHA DE NACIMIENDO *</label><br>
-                                    <input type="text"><br>
-                                </div>
-
-                                <div class="nombre-apellido">
-                                    <label for="">TELEFONO *</label><br>
-                                    <input type="text"><br>
-                                </div>
-                            </div> <br>
                         </div>
 
+                        <br>
 
-                    
+                        <p>DATOS DE LA CUENTA</p>
 
+                        <div class="correo">
+                            <label for="correo-registro">CORREO ELECTRONICO *</label><br>
+                            <input type="email" id="correo-registro">
+                        </div>
 
-                <div>
-
-                    <div>
-
-                        </div class="datos-personales">
-
-                    <p>DATOS DE LA CUENTA</p>
-
-                    <div class="correo">
-                        
-                        <label for="">CORREO ELECTRONICO *</label><br>
-                        <input type="text">
-                        
-                    </div><br>
+                        <br>
 
                         <div class="contraseñas">
 
                             <div class="contraseña">
-                                <label for="">CONTRASEÑA *</label><br>
-                                <input type="text"><br>
+                                <label for="contrasena-registro">CONTRASEÑA *</label><br>
+                                <input type="password" id="contrasena-registro">
                             </div>
 
                             <div class="contraseña">
-                                <label for="">REPETIR CONTRASEÑA *</label><br>
-                                <input type="text"><br>
+                                <label for="repetir-contrasena">REPETIR CONTRASEÑA *</label><br>
+                                <input type="password" id="repetir-contrasena">
                             </div>
 
                         </div>
+
                         <p>Minimo 8 caracteres</p>
 
-                        <label for="rol">ROL DEL VIVERO *</label><br>
+                        <div class="rol-vivero">
+                            <label for="rol-registro">ROL DEL VIVERO *</label><br>
 
-                        <select class="contraseña">
-                            <option value="Todas">Elegi un opcion</option>
-                            <option value="Empleado">Empleado</option>
-                            <option value="Cliente">Cliente</option>
+                            <select id="rol-registro">
+                                <option value="">Elegí una opción</option>
+                                <option value="Empleado">Empleado</option>
+                                <option value="Cliente">Cliente</option>
+                            </select>
+                        </div>
 
-                        </select>
-                    </div><br>
+                        <br>
 
-                    <div class="check">
-                        <input class="input-check" type="checkbox">
-                        Acepto los terminos y condiciones
+                        <div class="check">
+                            <input class="input-check" type="checkbox" id="terminos-registro">
+                            <label for="terminos-registro">
+                                Acepto los términos y condiciones *
+                            </label>
+                        </div>
+
+                        <p>&#9746; Mantener la sesion abierta</p>
+
+                        <br>
+
+                        <button type="submit">CREAR CUENTA</button>
+
+                        <a href="index.html" class="btn-inicio">
+                            VOLVER AL INICIO
+                        </a>
+
+                    </form>
+
+                    <div class="dividir">
+                        <p>
+                            Ya tenes cuenta?
+                            <a href="login.html">Ingresa aca</a>
+                        </p>
                     </div>
 
                 </div>
-                <p>&#9746 Mantener la sesion abierta</p><br>
-
-                <button>CREAR CUENTA</button><br>
-                <div class="dividir">
-                    <p>Ya tenes cuenta? <a href="login.html" >Ingresa aca</a></p>
-                    
-                </div>
-            </div>
 
             </div>
-
-
-
 
         </article>
-
     </section>
 
 </body>
-
 </html>
