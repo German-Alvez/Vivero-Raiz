@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +9,8 @@
     <title>Intranet | Vivero Raíz</title>
 
     <link rel="stylesheet" href="intranet.css">
+
+    <script src="sesion.js" defer></script>
     <script src="apis.js" defer></script>
     <script src="intranet.js" defer></script>
 </head>
@@ -22,8 +25,16 @@
             <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo Vivero Raíz">
 
             <div class="link">
+
                 <a href="index.html">INICIO</a>
-                <a href="login.html">CERRAR SESION</a>
+
+                <span class="saludo-usuario"></span>
+
+                <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+                <a href="login.html" class="btn-ingresar" hidden>
+                    INGRESAR
+                </a>
 
             </div>
         </nav>
@@ -49,10 +60,11 @@
         </section>
 
 
-
         <!-- TABLA DE PLANTAS -->
 
         <section class="tabla-contenedor">
+
+            <p id="mensaje-intranet" role="status" aria-live="polite"></p>
 
             <table>
 
@@ -66,14 +78,8 @@
                     </tr>
                 </thead>
 
-                <p id="mensaje-intranet" role="status" aria-live="polite"></p>
-
-                <table>
-
-
-                    <tbody id="tabla-plantas">
-                    </tbody>
-                </table>
+                <tbody id="tabla-plantas">
+                </tbody>
 
             </table>
 
@@ -101,7 +107,7 @@
 
                 <nav class="footer-nav">
                     <a href="catalogo.html">Catálogo</a>
-                    <a href="index.html">Nosotros</a>
+                    <a href="nosotros.html">Nosotros</a>
                     <a href="contacto.html">Contacto</a>
                     <a href="login.html">Ingresar</a>
                 </nav>
@@ -125,5 +131,4 @@
     </footer>
 
 </body>
-
 </html>

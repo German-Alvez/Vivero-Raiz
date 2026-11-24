@@ -2,6 +2,9 @@
 // Simula la respuesta de una API: devuelve el catálogo como texto JSON.
 // Más adelante se reemplaza por un fetch al servidor.
 
+
+// Es un respaldo, para apis.js
+
 function obtenerPlantasRespaldo()  {
     return `[
         { "id": 1, "nombre": "Sansevieria", "nombreCientifico": "Sansi", "categoria": "interior", "luz": "media sombra", "riego": "medio", "precio": 18500, "stock": 12, "fechaIngreso": "2026-03-10", "aptaMascotas": false, "etiquetas": ["purificadora"], "foto": "img/sansevieria.jpg", "notas": "Limpiar las hojas con un paño húmedo." },

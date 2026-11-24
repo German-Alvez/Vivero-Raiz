@@ -10,11 +10,14 @@
 
     <link rel="stylesheet" href="agregarPlanta.css">
 
+    <script src="sesion.js" defer></script>
     <script src="apis.js" defer></script>
     <script src="agregarPlanta.js" defer></script>
 </head>
 
 <body>
+
+    <!-- HEADER Y NAVBAR -->
 
     <header>
         <h1>VIVERO RAÍZ</h1>
@@ -22,9 +25,17 @@
         <nav>
             <a href="index.html">INICIO</a>
             <a href="intranet.html">INTRANET</a>
-            <a href="login.html">CERRAR SESION</a>
+
+            <span class="saludo-usuario"></span>
+
+            <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+            <a href="login.html" class="btn-ingresar">INGRESAR</a>
         </nav>
     </header>
+
+
+    <!-- FORMULARIO PARA AGREGAR PLANTAS -->
 
     <main class="panel">
 
@@ -150,6 +161,9 @@
 
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer class="pie-pagina">
 
         <div class="footer-columnas">
@@ -186,4 +200,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -1,16 +1,22 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+
+    <title>Contacto | Vivero Raíz</title>
 
     <link rel="stylesheet" href="contacto.css">
+
+    <script src="sesion.js" defer></script>
     <script src="validaciones.js" defer></script>
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
 
     <nav>
         <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
@@ -20,97 +26,115 @@
             <a href="index.html">INICIO</a>
             <a href="catalogo.html">CATALOGO</a>
             <a href="nosotros.html">NOSOTROS</a>
-            <a href="login.html"><button>INGRESAR</button></a>
-        </div>
 
+            <span class="saludo-usuario"></span>
+
+            <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+            <a href="login.html" class="btn-ingresar">
+                <button type="button">INGRESAR</button>
+            </a>
+        </div>
     </nav>
 
 
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main>
-        
-<article class="lado-izq">
 
-    <h1>CONTACTO</h1>
+        <article class="lado-izq">
 
-    <p>
-        Escribinos por encargos, envíos o asesoramiento. <br>
-        Respondemos dentro de las 48 horas hábiles.
-    </p>
+            <h1>CONTACTO</h1>
 
-    <form id="form-contacto" novalidate>
+            <p>
+                Escribinos por encargos, envíos o asesoramiento. <br>
+                Respondemos dentro de las 48 horas hábiles.
+            </p>
 
-        <!-- MENSAJES PARA JAVASCRIPT -->
-        <div id="mensaje-error" class="mensaje error" hidden></div>
-        <div id="mensaje-exito" class="mensaje exito" hidden></div>
+            <form id="form-contacto" novalidate>
 
-        <!-- NOMBRE Y CORREO -->
-        <div class="nombre-correo">
+                <!-- MENSAJES PARA JAVASCRIPT -->
 
-            <div>
-                <label for="nombre">NOMBRE Y APELLIDO *</label>
-                <input type="text" id="nombre" name="nombre">
-            </div>
-
-            <br>
-
-            <div>
-                <label for="correo">CORREO ELECTRÓNICO *</label>
-                <input type="email" id="correo" name="correo">
-            </div>
-
-        </div>
-
-        <!-- TELEFONO Y MOTIVO -->
-        <div class="tel-motivo">
-
-            <div>
-                <label for="telefono">TELÉFONO</label>
-                <input type="text" id="telefono" name="telefono">
-            </div>
-
-            <br>
-
-            <div class="categoria">
-                <label for="motivo">MOTIVO *</label>
-
-                <select id="motivo" name="motivo">
-                    <option value="">Elegí un motivo</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="reclamo">Reclamo</option>
-                    <option value="pedido">Pedido</option>
-                </select>
-            </div>
-
-        </div>
-
-        <!-- MENSAJE -->
-        <div class="msj">
-            <label for="mensaje">MENSAJE *</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-        </div>
-
-        <!-- CHECKBOX -->
-        <div class="check">
-            <input type="checkbox" id="novedades" name="novedades">
-            <p>Quiero recibir las novedades del vivero</p>
-        </div>
-
-        <button type="submit">ENVIAR CONSULTA</button>
-
-    </form>
-
-</article>
+                <div id="mensaje-error" class="mensaje error" hidden></div>
+                <div id="mensaje-exito" class="mensaje exito" hidden></div>
 
 
+                <!-- NOMBRE Y CORREO -->
+
+                <div class="nombre-correo">
+
+                    <div>
+                        <label for="nombre">NOMBRE Y APELLIDO *</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="correo">CORREO ELECTRÓNICO *</label>
+                        <input type="email" id="correo" name="correo">
+                    </div>
+
+                </div>
 
 
+                <!-- TELEFONO Y MOTIVO -->
 
+                <div class="tel-motivo">
+
+                    <div>
+                        <label for="telefono">TELÉFONO</label>
+                        <input type="text" id="telefono" name="telefono">
+                    </div>
+
+                    <br>
+
+                    <div class="categoria">
+                        <label for="motivo">MOTIVO *</label>
+
+                        <select id="motivo" name="motivo">
+                            <option value="">Elegí un motivo</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="reclamo">Reclamo</option>
+                            <option value="pedido">Pedido</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- MENSAJE -->
+
+                <div class="msj">
+                    <label for="mensaje">MENSAJE *</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                </div>
+
+
+                <!-- CHECKBOX -->
+
+                <div class="check">
+                    <input type="checkbox" id="novedades" name="novedades">
+                    <p>Quiero recibir las novedades del vivero</p>
+                </div>
+
+                <button type="submit">ENVIAR CONSULTA</button>
+
+            </form>
+
+        </article>
+
+
+        <!-- INFORMACION DEL VIVERO -->
 
         <aside class="lado-derecho">
 
-            <H2>DONDE ESTAMOS</H2>
-            <p>Ruta 25 km 4,5 - Escobar, Buenos Aires <br><br>
-                (011) 4444-5566 hola@viveroraiz.com</p>
+            <h2>DONDE ESTAMOS</h2>
+
+            <p>
+                Ruta 25 km 4,5 - Escobar, Buenos Aires <br><br>
+                (011) 4444-5566 hola@viveroraiz.com
+            </p>
 
             <p>HORARIOS DE ATENCION</p>
 
@@ -129,27 +153,21 @@
                 <div class="diiv">Cerrado</div>
 
             </div>
+
             <br><br>
+
             <textarea name="" id=""></textarea>
-
-
-
 
         </aside>
 
-
     </main>
-
-
-
 
 
     <!-- FOOTER -->
 
     <footer class="pie-pagina">
-        <!-- Contenedor de las 3 columnas principales -->
-        <div class="footer-columnas">
 
+        <div class="footer-columnas">
 
             <div class="columna">
                 <h4>VIVERO RAÍZ</h4>
@@ -161,6 +179,7 @@
 
             <div class="columna">
                 <h4>SECCIONES</h4>
+
                 <div class="footer-nav">
                     <a href="#catalogo">Catálogo</a>
                     <a href="#nosotros">Nosotros</a>
@@ -183,7 +202,8 @@
         <div class="footer-barra">
             <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
         </div>
-    </footer>
-</body>
 
+    </footer>
+
+</body>
 </html>

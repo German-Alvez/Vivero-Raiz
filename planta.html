@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="planta.css">
 
+    <script src="sesion.js" defer></script>
     <script src="datos.js" defer></script>
     <script src="apis.js" defer></script>
     <script src="planta.js" defer></script>
@@ -17,22 +18,43 @@
 
 <body>
 
+    <!-- NAVBAR -->
+
     <nav>
+
         <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
 
         <div class="link">
+
+            <a href="index.html">INICIO</a>
             <a href="catalogo.html">CATÁLOGO</a>
             <a href="nosotros.html">NOSOTROS</a>
             <a href="contacto.html">CONTACTO</a>
-            <a href="login.html"><button>INGRESAR</button></a>
+
+            <span class="saludo-usuario"></span>
+
+            <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+            <a href="login.html" class="btn-ingresar">
+                <button type="button">INGRESAR</button>
+            </a>
+
         </div>
+
     </nav>
+
+
+    <!-- FICHA DE PLANTA -->
 
     <main class="ficha-planta" id="ficha-planta">
         <p>Cargando planta...</p>
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer class="pie-pagina">
+
         <div class="footer-columnas">
 
             <div class="columna">
@@ -42,8 +64,10 @@
                 <p>(011) 4444-5566</p>
             </div>
 
+
             <div class="columna">
                 <h4>SECCIONES</h4>
+
                 <nav class="footer-nav">
                     <a href="catalogo.html">Catálogo</a>
                     <a href="nosotros.html">Nosotros</a>
@@ -51,6 +75,7 @@
                     <a href="login.html">Ingresar</a>
                 </nav>
             </div>
+
 
             <div class="columna">
                 <h4>HORARIOS</h4>
@@ -61,9 +86,11 @@
 
         </div>
 
+
         <div class="footer-barra">
             <p>&copy; 2026 VIVERO RAÍZ — TRABAJO PRACTICO INTEGRADOR</p>
         </div>
+
     </footer>
 
 </body>

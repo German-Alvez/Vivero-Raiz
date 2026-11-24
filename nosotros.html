@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +9,8 @@
     <title>Nosotros | Vivero Raíz</title>
 
     <link rel="stylesheet" href="nosotros.css">
+
+    <script src="sesion.js" defer></script>
 </head>
 
 <body>
@@ -20,14 +23,20 @@
 
             <img src="img/Gemini_Generated_Image_n17u9tn17u9tn17u.jpg" alt="Logo">
 
-
-
             <div class="link" id="menu">
+
                 <a href="intranet.html">INTRANET</a>
                 <a href="index.html">INICIO</a>
                 <a href="catalogo.html">CATALOGO</a>
                 <a href="contacto.html">CONTACTO</a>
-                <a href="login.html"><button>INGRESAR</button></a>
+
+                <span class="saludo-usuario"></span>
+
+                <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+                <a href="login.html" class="btn-ingresar">
+                    <button type="button">INGRESAR</button>
+                </a>
 
             </div>
 
@@ -40,7 +49,7 @@
 
     <main>
 
-        <!-- PRESENTACIÓN -->
+        <!-- PRESENTACION -->
 
         <section class="presentacion">
 
@@ -64,16 +73,12 @@
 
             </div>
 
-
-
         </section>
 
 
         <!-- NUESTRA HISTORIA -->
 
         <section class="historia">
-
-
 
             <div class="historia-texto">
 
@@ -104,7 +109,7 @@
         </section>
 
 
-        <!-- NUESTRO PROPÓSITO -->
+        <!-- NUESTRO PROPOSITO -->
 
         <section class="proposito">
 
@@ -119,6 +124,7 @@
                 </p>
 
             </div>
+
 
             <div class="contenedor-valores">
 
@@ -135,6 +141,7 @@
 
                 </article>
 
+
                 <article class="valor">
 
                     <span>02</span>
@@ -147,6 +154,7 @@
                     </p>
 
                 </article>
+
 
                 <article class="valor">
 
@@ -164,9 +172,6 @@
             </div>
 
         </section>
-
-
-
 
     </main>
 
@@ -232,5 +237,4 @@
     <script src="validaciones.js" defer></script>
 
 </body>
-
 </html>

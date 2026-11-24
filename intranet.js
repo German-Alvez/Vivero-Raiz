@@ -1,3 +1,4 @@
+
 // BUSCAR ELEMENTOS DEL HTML
 
 const tablaPlantas = document.getElementById("tabla-plantas");
@@ -224,6 +225,28 @@ tablaPlantas.addEventListener("click", async function(event) {
     }
 
 });
+
+
+// MOSTRAR EL NOMBRE DEL USUARIO
+
+mostrarUsuario();
+
+
+// CERRAR SESION AL HACER CLICK
+
+const botonCerrarSesion = document.getElementById("btn-cerrar-sesion");
+
+if (botonCerrarSesion) {
+
+    botonCerrarSesion.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        cerrarSesion();
+
+    });
+
+}
 
 
 // CARGAR TABLA AL INGRESAR

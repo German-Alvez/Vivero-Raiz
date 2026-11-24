@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="catalogo.css">
 
+    <script src="sesion.js" defer></script>
     <script src="datos.js" defer></script>
     <script src="apis.js" defer></script>
     <script src="catalogo.js" defer></script>
@@ -27,9 +28,17 @@
             <a href="index.html">INICIO</a>
             <a href="nosotros.html">NOSOTROS</a>
             <a href="contacto.html">CONTACTO</a>
-            <a href="login.html"><button>INGRESAR</button></a>
+
+            <span class="saludo-usuario"></span>
+
+            <a href="#" class="btn-cerrar-sesion" hidden>CERRAR SESION</a>
+
+            <a href="login.html" class="btn-ingresar">
+                <button type="button">INGRESAR</button>
+            </a>
         </div>
     </nav>
+
 
     <!-- HEADER Y BUSCADOR -->
 
@@ -80,13 +89,16 @@
 
         </article>
 
+
         <!-- MENSAJE DE ESTADO -->
 
         <p id="mensaje-estado" role="status" aria-live="polite"></p>
 
+
         <!-- CONTADOR DE RESULTADOS -->
 
         <p id="contador-resultados"></p>
+
 
         <!-- CONTENEDOR DE TARJETAS -->
 
@@ -101,7 +113,7 @@
                 No se encontraron plantas con esos filtros.
             </p>
 
-            <!-- PAGINACIÓN VISUAL -->
+            <!-- PAGINACION VISUAL -->
 
             <div class="paginas">
                 <button type="button" class="btn1">1</button>
@@ -113,6 +125,7 @@
         </article>
 
     </header>
+
 
     <!-- FOOTER -->
 
